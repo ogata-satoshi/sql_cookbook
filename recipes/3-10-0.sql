@@ -1,0 +1,9 @@
+DROP TABLE IF EXISTS emp_bonus;
+
+CREATE TABLE emp_bonus (EMPNO int, RECEIVED varchar, TYPE int);
+
+INSERT INTO
+  emp_bonus (EMPNO, RECEIVED, TYPE)
+VALUES
+  (7934, '17-MAR-2015', 1),
+  (7934, '15-FEB-2015', 2),
