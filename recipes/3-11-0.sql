@@ -1,5 +1,5 @@
 INSERT INTO
-  emp (
+  sql_cookbook.emp (
     empno,
     ename,
     job,
@@ -19,6 +19,6 @@ SELECT
   comm,
   NULL
 FROM
-  emp
+  sql_cookbook.emp
 WHERE
   ename = 'KING'

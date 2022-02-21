@@ -1,10 +1,10 @@
-DROP VIEW IF EXISTS V;
+DROP VIEW IF EXISTS sql_cookbook.V;
 
-CREATE VIEW V AS
+CREATE VIEW sql_cookbook.V AS
 SELECT
   *
 FROM
-  emp
+  sql_cookbook.emp
 WHERE
   deptno != 10
 UNION
@@ -12,6 +12,6 @@ ALL
 SELECT
   *
 FROM
-  emp
+  sql_cookbook.emp
 WHERE
   ename = 'WARD'

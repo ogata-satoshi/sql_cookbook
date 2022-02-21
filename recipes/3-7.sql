@@ -13,7 +13,7 @@ FROM
       deptno,
       count(1) AS cnt
     FROM
-      emp
+      sql_cookbook.emp
     GROUP BY
       empno,
       ename,
@@ -41,7 +41,7 @@ WHERE
           V.deptno,
           count(1) AS cnt
         FROM
-          V
+          sql_cookbook.V
         GROUP BY
           V.empno,
           V.ename,
@@ -80,7 +80,7 @@ FROM
       V.deptno,
       count(1) AS cnt
     FROM
-      V
+      sql_cookbook.V
     GROUP BY
       V.empno,
       V.ename,
@@ -108,7 +108,7 @@ WHERE
           deptno,
           count(1) AS cnt
         FROM
-          emp
+          sql_cookbook.emp
         GROUP BY
           empno,
           ename,
@@ -130,104 +130,103 @@ WHERE
       AND t1.deptno = t2.deptno
       AND t1.cnt = t2.cnt
   )
-
-/*別解 というか本に載っているのよりこっちのほうが短く読みやすいと思う。
-SELECT
-  empno,
-  ename,
-  job,
-  MGR,
-  hiredate,
-  sal,
-  comm,
-  deptno,
-  count(1)
-FROM
-  emp
-GROUP BY
-  empno,
-  ename,
-  job,
-  MGR,
-  hiredate,
-  sal,
-  comm,
-  deptno
-HAVING
-  NOT EXISTS (
-    SELECT
-      *,
-      count(1)
-    FROM
-      V
-    GROUP BY
-      V.empno,
-      V.ename,
-      V.job,
-      V.MGR,
-      V.hiredate,
-      V.sal,
-      V.comm,
-      V.deptno
-    HAVING
-      emp.empno = V.empno
-      AND emp.ename = V.ename
-      AND emp.job = V.job
-      AND coalesce(emp.mgr, 0) = coalesce(V.mgr, 0)
-      AND emp.hiredate = V.hiredate
-      AND emp.sal = V.sal
-      AND coalesce(emp.comm, 0) = coalesce(V.comm, 0)
-      AND emp.deptno = V.deptno
-      AND count(ALL emp.empno) = count(ALL V.empno)
-  )
-UNION
-ALL
-SELECT
-  empno,
-  ename,
-  job,
-  MGR,
-  hiredate,
-  sal,
-  comm,
-  deptno,
-  count(1) AS cnt
-FROM
-  V
-GROUP BY
-  empno,
-  ename,
-  job,
-  MGR,
-  hiredate,
-  sal,
-  comm,
-  deptno
-HAVING
-  NOT EXISTS (
-    SELECT
-      *,
-      count(1)
-    FROM
-      emp
-    GROUP BY
-      emp.empno,
-      emp.ename,
-      emp.job,
-      emp.MGR,
-      emp.hiredate,
-      emp.sal,
-      emp.comm,
-      emp.deptno
-    HAVING
-      emp.empno = V.empno
-      AND emp.ename = V.ename
-      AND emp.job = V.job
-      AND coalesce(emp.mgr, 0) = coalesce(V.mgr, 0)
-      AND emp.hiredate = V.hiredate
-      AND emp.sal = V.sal
-      AND coalesce(emp.comm, 0) = coalesce(V.comm, 0)
-      AND emp.deptno = V.deptno
-      AND count(ALL emp.empno) = count(ALL V.empno)
-  )
-*/
+  /*別解 というか本に載っているのよりこっちのほうが短く読みやすいと思う。
+   SELECT
+   empno,
+   ename,
+   job,
+   MGR,
+   hiredate,
+   sal,
+   comm,
+   deptno,
+   count(1)
+   from
+   sql_cookbook.emp
+   GROUP BY
+   empno,
+   ename,
+   job,
+   MGR,
+   hiredate,
+   sal,
+   comm,
+   deptno
+   HAVING
+   NOT EXISTS (
+   SELECT
+   *,
+   count(1)
+   FROM
+   sql_cookbook.V
+   GROUP BY
+   V.empno,
+   V.ename,
+   V.job,
+   V.MGR,
+   V.hiredate,
+   V.sal,
+   V.comm,
+   V.deptno
+   HAVING
+   emp.empno = V.empno
+   AND emp.ename = V.ename
+   AND emp.job = V.job
+   AND coalesce(emp.mgr, 0) = coalesce(V.mgr, 0)
+   AND emp.hiredate = V.hiredate
+   AND emp.sal = V.sal
+   AND coalesce(emp.comm, 0) = coalesce(V.comm, 0)
+   AND emp.deptno = V.deptno
+   AND count(ALL emp.empno) = count(ALL V.empno)
+   )
+   UNION
+   ALL
+   SELECT
+   empno,
+   ename,
+   job,
+   MGR,
+   hiredate,
+   sal,
+   comm,
+   deptno,
+   count(1) AS cnt
+   FROM
+   sql_cookbook.V
+   GROUP BY
+   empno,
+   ename,
+   job,
+   MGR,
+   hiredate,
+   sal,
+   comm,
+   deptno
+   HAVING
+   NOT EXISTS (
+   SELECT
+   *,
+   count(1)
+   FROM
+   sql_cookbook.emp
+   GROUP BY
+   emp.empno,
+   emp.ename,
+   emp.job,
+   emp.MGR,
+   emp.hiredate,
+   emp.sal,
+   emp.comm,
+   emp.deptno
+   HAVING
+   emp.empno = V.empno
+   AND emp.ename = V.ename
+   AND emp.job = V.job
+   AND coalesce(emp.mgr, 0) = coalesce(V.mgr, 0)
+   AND emp.hiredate = V.hiredate
+   AND emp.sal = V.sal
+   AND coalesce(emp.comm, 0) = coalesce(V.comm, 0)
+   AND emp.deptno = V.deptno
+   AND count(ALL emp.empno) = count(ALL V.empno)
+   )
+   */

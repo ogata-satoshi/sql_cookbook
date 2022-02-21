@@ -1,7 +1,7 @@
 SELECT
   avg(sal)
 FROM
-  emp
+  sql_cookbook.emp
 WHERE
   sal NOT IN(
     (

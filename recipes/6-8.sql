@@ -1,6 +1,6 @@
 SELECT
   ename
 FROM
-  emp
+  sql_cookbook.emp
 ORDER BY
   right(ename, 2)

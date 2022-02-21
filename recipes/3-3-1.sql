@@ -5,8 +5,8 @@ SELECT
   emp.sal,
   deptno
 FROM
-  emp
-  INNER JOIN V ON (
+  sql_cookbook.emp
+  INNER JOIN sql_cookbook.V ON (
     emp.ename = V.ename
     AND emp.job = V.job
     AND emp.SAL = V.sal

@@ -1,6 +1,6 @@
-DROP VIEW IF EXISTS V;
+DROP VIEW IF EXISTS sql_cookbook.V;
 
-CREATE VIEW V (id, amt, trx) AS
+CREATE VIEW sql_cookbook.V (id, amt, trx) AS
 SELECT
   1,
   100,

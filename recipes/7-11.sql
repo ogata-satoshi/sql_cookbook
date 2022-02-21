@@ -7,4 +7,4 @@ SELECT
     END
   ) / sum(sal) AS pct
 FROM
-  emp
+  sql_cookbook.emp

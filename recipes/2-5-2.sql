@@ -13,7 +13,7 @@ FROM
         ELSE 1
       END AS is_null
     FROM
-      emp
+      sql_cookbook.emp
   ) AS t1
 ORDER BY
   is_null,

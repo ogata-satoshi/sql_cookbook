@@ -9,7 +9,7 @@ FROM
     SELECT
       id
     FROM
-      t10
+      sql_cookbook.t10
   ) AS iter
 WHERE
   id <= length(t1.chara) - length(REPLACE(t1.chara, ',', ''))

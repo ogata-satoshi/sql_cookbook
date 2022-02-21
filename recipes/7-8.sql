@@ -19,4 +19,4 @@ SELECT
     )
   ) / 3 AS MovingAverage
 FROM
-  sales_table
+  sql_cookbook.sales_table

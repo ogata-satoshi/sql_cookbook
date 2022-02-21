@@ -12,8 +12,8 @@ FROM
       a.ename,
       SUBSTRING(a.ename, iter.id, 1) AS c
     FROM
-      emp AS a,
-      t10 AS iter
+      sql_cookbook.emp AS a,
+      sql_cookbook.t10 AS iter
     WHERE
       iter.id <= length(a.ename)
   ) AS t1

@@ -16,4 +16,4 @@ SELECT
       id
   ) AS balance
 FROM
-  V
+  sql_cookbook.V

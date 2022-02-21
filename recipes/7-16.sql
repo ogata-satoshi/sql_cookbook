@@ -5,7 +5,7 @@ WITH median (median) AS (
         sal
     )
   FROM
-    emp
+    sql_cookbook.emp
 ),
 sub (sub) AS (
   SELECT
@@ -18,7 +18,7 @@ sub (sub) AS (
       )
     )
   FROM
-    emp
+    sql_cookbook.emp
 ),
 MedAbsDeviation (MAD) AS (
   SELECT
@@ -35,5 +35,5 @@ SELECT
   ename,
   job
 FROM
-  emp,
+  sql_cookbook.emp,
   MedAbsDeviation

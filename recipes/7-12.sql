@@ -1,6 +1,6 @@
 SELECT
   avg(COALESCE(comm, 0))
 FROM
-  emp
+  sql_cookbook.emp
 WHERE
   deptno = 30

@@ -1,6 +1,6 @@
-DROP VIEW IF EXISTS V;
+DROP VIEW IF EXISTS sql_cookbook.V;
 
-CREATE VIEW V AS
+CREATE VIEW sql_cookbook.V AS
 SELECT
   'mo,larry,curly' AS name
 UNION

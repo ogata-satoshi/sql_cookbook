@@ -1,7 +1,7 @@
 SELECT
   data
 FROM
-  v
+  sql_cookbook.V
 WHERE
   translate(
     lower(data),

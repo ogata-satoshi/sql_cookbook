@@ -7,6 +7,6 @@ SELECT
       empno
   ) AS emps
 FROM
-  emp
+  sql_cookbook.emp
 GROUP BY
   deptno

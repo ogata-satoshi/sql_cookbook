@@ -4,7 +4,7 @@ SELECT
   job,
   comm
 FROM
-  emp
+  sql_cookbook.emp
 ORDER BY
   CASE
     WHEN job = 'SALESMAN' THEN comm

@@ -2,7 +2,7 @@ SELECT
   ename AS ename_and_dname,
   deptno
 FROM
-  emp
+  sql_cookbook.emp
 WHERE
   deptno = 10
 UNION
@@ -16,4 +16,4 @@ SELECT
   dname AS ename_and_dname,
   deptno
 FROM
-  dept
+  sql_cookbook.dept

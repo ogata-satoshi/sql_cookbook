@@ -2,13 +2,13 @@ SELECT
   empno,
   ename
 FROM
-  emp
+  sql_cookbook.emp
 WHERE
   COALESCE(comm, 0) < (
     SELECT
       comm
     FROM
-      emp
+      sql_cookbook.emp
     WHERE
       ename = 'WARD'
   )

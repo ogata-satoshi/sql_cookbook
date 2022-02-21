@@ -4,4 +4,4 @@ SELECT
   sal,
   REPLACE(CAST(sal AS VARCHAR), '0', '') AS STRIPPED2
 FROM
-  emp
+  sql_cookbook.emp

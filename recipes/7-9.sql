@@ -14,7 +14,7 @@ FROM
           sal,
           count(sal) AS cnt
         FROM
-          emp
+          sql_cookbook.emp
         WHERE
           deptno = 20
         GROUP BY

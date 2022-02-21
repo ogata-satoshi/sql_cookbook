@@ -3,5 +3,5 @@ SELECT
   dname,
   ename
 FROM
-  emp FULL
-  OUTER JOIN dept ON emp.deptno = dept.deptno
+  sql_cookbook.emp FULL
+  OUTER JOIN sql_cookbook.dept ON emp.deptno = dept.deptno

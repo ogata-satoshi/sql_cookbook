@@ -1,13 +1,13 @@
 SELECT
   DISTINCT deptno
 FROM
-  dept
+  sql_cookbook.dept
 WHERE
   NOT EXISTS (
     SELECT
       1
     FROM
-      emp
+      sql_cookbook.emp
     WHERE
-      dept.deptno = emp.deptno
+      dept.deptno = sql_cookbook.emp.deptno
   )

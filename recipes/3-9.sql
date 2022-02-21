@@ -15,8 +15,8 @@ FROM
         END
       ) AS total_bonus
     FROM
-      emp
-      INNER JOIN emp_bonus ON emp.empno = emp_bonus.empno
+      sql_cookbook.emp
+      INNER JOIN sql_cookbook.emp_bonus ON emp.empno = emp_bonus.empno
     WHERE
       emp.deptno = 10
     GROUP BY
@@ -27,7 +27,7 @@ FROM
       deptno,
       sum(sal) AS total_sal
     FROM
-      emp
+      sql_cookbook.emp
     WHERE
       deptno = 10
     GROUP BY

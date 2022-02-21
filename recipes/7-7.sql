@@ -9,6 +9,6 @@ SELECT
     )
   )
 FROM
-  emp
+  sql_cookbook.emp
 WHERE
   deptno = 10

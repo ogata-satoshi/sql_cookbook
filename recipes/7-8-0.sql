@@ -1,9 +1,9 @@
-DROP TABLE IF EXISTS sales_table;
+DROP TABLE IF EXISTS sql_cookbook.sales_table;
 
-CREATE TABLE sales_table (date1 VARCHAR, sales int);
+CREATE TABLE sql_cookbook.sales_table (date1 VARCHAR, sales int);
 
 INSERT INTO
-  sales_table (date1, sales)
+  sql_cookbook.sales_table (date1, sales)
 VALUES
   ('2020-01-01', 647),
   ('2020-01-02', 561),

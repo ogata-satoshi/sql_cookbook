@@ -1,9 +1,9 @@
-DROP TABLE IF EXISTS emp_bonus;
+DROP TABLE IF EXISTS sql_cookbook.emp_bonus;
 
-CREATE TABLE emp_bonus (EMPNO int, RECEIVED varchar, TYPE int);
+CREATE TABLE sql_cookbook.emp_bonus (EMPNO int, RECEIVED varchar, TYPE int);
 
 INSERT INTO
-  emp_bonus (EMPNO, RECEIVED, TYPE)
+  sql_cookbook.emp_bonus (EMPNO, RECEIVED, TYPE)
 VALUES
   (7934, '17-MAR-2015', 1),
   (7934, '15-FEB-2015', 2),

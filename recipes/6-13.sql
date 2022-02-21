@@ -5,7 +5,7 @@ SELECT
     ''
   )
 FROM
-  V
+  sql_cookbook.V
 WHERE
   TRANSLATE(
     lower(mixed),

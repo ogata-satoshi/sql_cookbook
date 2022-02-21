@@ -1,6 +1,6 @@
-DROP VIEW IF EXISTS V;
+DROP VIEW IF EXISTS sql_cookbook.V;
 
-CREATE VIEW V AS
+CREATE VIEW sql_cookbook.V AS
 SELECT
   REPLACE (mixed, ' ', '') AS mixed
 FROM
@@ -8,7 +8,7 @@ FROM
     SELECT
       substr(ename, 1, 2) || cast(deptno AS varchar) || substr(ename, 3, 2) AS mixed
     FROM
-      emp
+      sql_cookbook.emp
     WHERE
       deptno = 10
     UNION
@@ -16,7 +16,7 @@ FROM
     SELECT
       cast(empno AS VARCHAR) AS mixed
     FROM
-      emp
+      sql_cookbook.emp
     WHERE
       deptno = 20
     UNION
@@ -24,7 +24,7 @@ FROM
     SELECT
       ename AS mixed
     FROM
-      emp
+      sql_cookbook.emp
     WHERE
       deptno = 30
   ) x;

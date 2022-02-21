@@ -18,5 +18,5 @@ FROM
     SELECT
       ename || cast(sal AS VARChaR) AS data
     FROM
-      emp
+      sql_cookbook.emp
   ) AS t1

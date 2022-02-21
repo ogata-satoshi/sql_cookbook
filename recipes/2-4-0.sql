@@ -1,7 +1,7 @@
-DROP VIEW IF EXISTS V;
+DROP VIEW IF EXISTS sql_cookbook.V;
 
-CREATE VIEW V AS
+CREATE VIEW sql_cookbook.V AS
 SELECT
   ename || ' ' || deptno AS data
 FROM
-  emp;
+  sql_cookbook.emp;

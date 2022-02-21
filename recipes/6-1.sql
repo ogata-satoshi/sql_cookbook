@@ -5,7 +5,7 @@ FROM
     SELECT
       ename
     FROM
-      emp
+      sql_cookbook.emp
     WHERE
       ename = 'KING'
   ) AS e,
@@ -13,7 +13,7 @@ FROM
     SELECT
       id AS pos
     FROM
-      t10
+      sql_cookbook.t10
   ) AS iter
 WHERE
   iter.pos <= length(e.ename)
