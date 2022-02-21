@@ -1,0 +1,19 @@
+SELECT
+  avg(sal)
+FROM
+  emp
+WHERE
+  sal NOT IN(
+    (
+      SELECT
+        max(sal)
+      FROM
+        emp
+    ),
+    (
+      SELECT
+        min(sal)
+      FROM
+        emp
+    )
+  )
