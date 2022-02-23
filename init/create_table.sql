@@ -9,7 +9,7 @@ CREATE TABLE sql_cookbook.emp (
   ENAME STRING,
   JOB STRING,
   MGR INT,
-  HIREDATE STRING,
+  HIREDATE DATE,
   SAL INT,
   COMM INT,
   DEPTNO INT
@@ -32,7 +32,7 @@ VALUES
     'SMITH',
     'CLERK',
     7902,
-    '17-DEC-2005',
+    '2005-12-17',
     800,
     NULL,
     20
@@ -42,7 +42,7 @@ VALUES
     'ALLEN',
     'SALESMAN',
     7698,
-    '20-FEB-2006',
+    '2006-02-20',
     1600,
     300,
     30
@@ -52,7 +52,7 @@ VALUES
     'WARD',
     'SALESMAN',
     7698,
-    '22-FEB-2006',
+    '2006-02-22',
     1250,
     500,
     30
@@ -62,7 +62,7 @@ VALUES
     'JONES',
     'MANAGER',
     7839,
-    '02-APR-2006',
+    '2006-04-02',
     2975,
     NULL,
     20
@@ -72,7 +72,7 @@ VALUES
     'MARTIN',
     'SALESMAN',
     7698,
-    '28-SEP-2006',
+    '2006-09-28',
     1250,
     1400,
     30
@@ -82,7 +82,7 @@ VALUES
     'BLAKE',
     'MANAGER',
     7839,
-    '01-MAY-2006',
+    '2006-05-01',
     2850,
     NULL,
     30
@@ -92,7 +92,7 @@ VALUES
     'CLARK',
     'MANAGER',
     7839,
-    '09-JUN-2006',
+    '2006-06-09',
     2450,
     NULL,
     10
@@ -102,7 +102,7 @@ VALUES
     'SCOTT',
     'ANALYST',
     7566,
-    '09-DEC-2007',
+    '2007-12-09',
     3000,
     NULL,
     20
@@ -112,7 +112,7 @@ VALUES
     'KING',
     'PRESIDENT',
     NULL,
-    '17-NOV-2006',
+    '2006-11-17',
     5000,
     NULL,
     10
@@ -122,7 +122,7 @@ VALUES
     'TURNER',
     'SALESMAN',
     7698,
-    '08-SEP-2006',
+    '2006-09-08',
     1500,
     0,
     30
@@ -132,7 +132,7 @@ VALUES
     'ADAMS',
     'CLERK',
     7788,
-    '12-JAN-2008',
+    '2008-01-12',
     1100,
     NULL,
     20
@@ -142,7 +142,7 @@ VALUES
     'JAMES',
     'CLERK',
     7698,
-    '03-DEC-2006',
+    '2006-12-03',
     950,
     NULL,
     30
@@ -152,7 +152,7 @@ VALUES
     'FORD',
     'ANALYST',
     7566,
-    '03-DEC-2006',
+    '2006-12-03',
     3000,
     NULL,
     20
@@ -162,7 +162,7 @@ VALUES
     'MILLER',
     'CLERK',
     7782,
-    '23-JAN-2007',
+    '2007-01-23',
     1300,
     NULL,
     10
@@ -192,7 +192,7 @@ CREATE TABLE SMEAGOL.emp (
   ENAME STRING,
   JOB STRING,
   MGR INT,
-  HIREDATE STRING,
+  HIREDATE DATE,
   SAL INT,
   COMM INT,
   DEPTNO INT
@@ -219,7 +219,7 @@ VALUES
     'SMITH',
     'CLERK',
     7902,
-    '17-DEC-2005',
+    '2005-12-17',
     800,
     NULL,
     20
@@ -229,7 +229,7 @@ VALUES
     'ALLEN',
     'SALESMAN',
     7698,
-    '20-FEB-2006',
+    '2006-02-20',
     1600,
     300,
     30
@@ -239,7 +239,7 @@ VALUES
     'WARD',
     'SALESMAN',
     7698,
-    '22-FEB-2006',
+    '2006-02-22',
     1250,
     500,
     30
@@ -249,7 +249,7 @@ VALUES
     'JONES',
     'MANAGER',
     7839,
-    '02-APR-2006',
+    '2006-04-02',
     2975,
     NULL,
     20
@@ -259,7 +259,7 @@ VALUES
     'MARTIN',
     'SALESMAN',
     7698,
-    '28-SEP-2006',
+    '2006-09-28',
     1250,
     1400,
     30
@@ -269,7 +269,7 @@ VALUES
     'BLAKE',
     'MANAGER',
     7839,
-    '01-MAY-2006',
+    '2006-05-01',
     2850,
     NULL,
     30
@@ -279,7 +279,7 @@ VALUES
     'CLARK',
     'MANAGER',
     7839,
-    '09-JUN-2006',
+    '2006-06-09',
     2450,
     NULL,
     10
@@ -289,7 +289,7 @@ VALUES
     'SCOTT',
     'ANALYST',
     7566,
-    '09-DEC-2007',
+    '2007-12-09',
     3000,
     NULL,
     20
@@ -299,7 +299,7 @@ VALUES
     'KING',
     'PRESIDENT',
     NULL,
-    '17-NOV-2006',
+    '2006-11-17',
     5000,
     NULL,
     10
@@ -309,7 +309,7 @@ VALUES
     'TURNER',
     'SALESMAN',
     7698,
-    '08-SEP-2006',
+    '2006-09-08',
     1500,
     0,
     30
@@ -319,7 +319,7 @@ VALUES
     'ADAMS',
     'CLERK',
     7788,
-    '12-JAN-2008',
+    '2008-01-12',
     1100,
     NULL,
     20
@@ -329,7 +329,7 @@ VALUES
     'JAMES',
     'CLERK',
     7698,
-    '03-DEC-2006',
+    '2006-12-03',
     950,
     NULL,
     30
@@ -339,7 +339,7 @@ VALUES
     'FORD',
     'ANALYST',
     7566,
-    '03-DEC-2006',
+    '2006-12-03',
     3000,
     NULL,
     20
@@ -349,7 +349,7 @@ VALUES
     'MILLER',
     'CLERK',
     7782,
-    '23-JAN-2007',
+    '2007-01-23',
     1300,
     NULL,
     10
@@ -399,3 +399,44 @@ VALUES
   ('Shakspear'),
   ('Sheakspir'),
   ('Shakespar');
+
+-- 8章で使うテーブル
+DROP TABLE IF EXISTS sql_cookbook.t500;
+
+DROP TABLE IF EXISTS sql_cookbook.t500;
+
+CREATE TABLE IF NOT EXISTS sql_cookbook.t500 (id int) AS
+SELECT
+  row_number() over () AS id
+FROM
+  UNNEST(generate_array(1, 500));
+
+-- 9章で使うテーブル
+DROP TABLE IF EXISTS sql_cookbook.emp_project;
+
+CREATE TABLE sql_cookbook.emp_project (
+  empno int,
+  ename STRING,
+  proj_id int,
+  proj_start date,
+  proj_end date
+);
+
+INSERT INTO
+  sql_cookbook.emp_project (empno, ename, proj_id, proj_start, proj_end)
+VALUES
+  (7782, 'CLARK', 1, '2020-06-16', '2020-06-18'),
+  (7782, 'CLARK', 4, '2020-06-19', '2020-06-24'),
+  (7782, 'CLARK', 7, '2020-06-22', '2020-06-25'),
+  (7782, 'CLARK', 10, '2020-06-25', '2020-06-28'),
+  (7782, 'CLARK', 13, '2020-06-28', '2020-07-02'),
+  (7839, 'KING', 2, '2020-06-17', '2020-06-21'),
+  (7839, 'KING', 8, '2020-06-23', '2020-06-25'),
+  (7839, 'KING', 14, '2020-06-29', '2020-06-30'),
+  (7839, 'KING', 11, '2020-06-26', '2020-06-27'),
+  (7839, 'KING', 5, '2020-06-20', '2020-06-24'),
+  (7934, 'MILLER', 3, '2020-06-18', '2020-06-22'),
+  (7934, 'MILLER', 12, '2020-06-27', '2020-06-28'),
+  (7934, 'MILLER', 15, '2020-06-30', '2020-07-03'),
+  (7934, 'MILLER', 9, '2020-06-24', '2020-06-27'),
+  (7934, 'MILLER', 6, '2020-06-21', '2020-06-23');
