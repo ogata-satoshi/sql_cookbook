@@ -1,0 +1,61 @@
+DROP VIEW IF EXISTS sql_cookbook.V;
+
+CREATE VIEW sql_cookbook.V AS
+SELECT
+  20 AS test1,
+  20 AS test2
+UNION
+ALL
+SELECT
+  50 AS test1,
+  25 AS test2
+UNION
+ALL
+SELECT
+  20 AS test1,
+  20 AS test2
+UNION
+ALL
+SELECT
+  60 AS test1,
+  30 AS test2
+UNION
+ALL
+SELECT
+  70 AS test1,
+  90 AS test2
+UNION
+ALL
+SELECT
+  80 AS test1,
+  130 AS test2
+UNION
+ALL
+SELECT
+  90 AS test1,
+  70 AS test2
+UNION
+ALL
+SELECT
+  100 AS test1,
+  50 AS test2
+UNION
+ALL
+SELECT
+  110 AS test1,
+  55 AS test2
+UNION
+ALL
+SELECT
+  120 AS test1,
+  60 AS test2
+UNION
+ALL
+SELECT
+  130 AS test1,
+  80 AS test2
+UNION
+ALL
+SELECT
+  140 AS test1,
+  70 AS test2
