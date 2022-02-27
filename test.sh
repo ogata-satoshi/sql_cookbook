@@ -1,11 +1,15 @@
 #!/bin/bash
+
+# 設定ファイルから変数を取得
+source .config
+
 # sql ファイルからクエリを作成する
-sql1=`cat recipes/$1.sql`
+sql1=`cat $CORRECTS_DIR/$1.sql`
 if [ "${sql1}" = "" ]; then
   echo "正解データが存在しません。"
   exit $?
 fi
-sql2=`cat answers/$1.sql`
+sql2=`cat $ANSWERS_DIR/$1.sql`
 if [ "${sql2}" = "" ]; then
   echo "解答データが存在しません"
   exit $?
