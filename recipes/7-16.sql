@@ -1,36 +1,17 @@
-WITH median (median) AS (
+WITH sub_table AS (
   SELECT
-    PERCENTILE_CONT(0.5) WITHIN GROUP (
-      ORDER BY
-        sal
-    )
+    abs(sal - PERCENTILE_CONT(sal, 0.5) over()) AS sub
   FROM
     sql_cookbook.emp
 ),
-sub (sub) AS (
+MedAbsDeviation AS (
   SELECT
-    abs(
-      sal - (
-        SELECT
-          median
-        FROM
-          median
-      )
-    )
+    DISTINCT PERCENTILE_CONT(sub, 0.5) over() AS MAD
   FROM
-    sql_cookbook.emp
-),
-MedAbsDeviation (MAD) AS (
-  SELECT
-    PERCENTILE_CONT(0.5) WITHIN GROUP (
-      ORDER BY
-        sub
-    )
-  FROM
-    sub
+    sub_table
 )
 SELECT
-  1.0 * abs(sal - MAD) / MAD,
+  round(1.0 * abs(sal - MAD) / MAD, 1) AS deviation,
   sal,
   ename,
   job

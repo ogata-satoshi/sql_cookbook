@@ -8,12 +8,12 @@ WHERE
       SELECT
         max(sal)
       FROM
-        emp
+        sql_cookbook.emp
     ),
     (
       SELECT
         min(sal)
       FROM
-        emp
+        sql_cookbook.emp
     )
   )
