@@ -27,7 +27,8 @@ FROM
       row_number() over (
         PARTITION by grp
         ORDER BY
-          sal DESC
+          sal DESC,
+          ename DESC
       ) AS rn
     FROM
       (
