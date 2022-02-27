@@ -412,6 +412,36 @@ VALUES
   ('Sheakspir'),
   ('Shakespar');
 
+DROP TABLE IF EXISTS sql_cookbook.employee_comment;
+
+CREATE TABLE sql_cookbook.employee_comment AS
+SELECT
+  7369 AS emp_id,
+  "126 Varum, Edmore MI 48829, 989 313-5351" AS text
+UNION
+ALL
+SELECT
+  7499,
+  """1105 McConnell Court
+Cedar Lake MI 48812
+Home: 989-387-4321
+Cell: (237) 438-3333""";
+
+-- 7章で使うテーブル
+DROP TABLE IF EXISTS sql_cookbook.sales_table;
+
+CREATE TABLE sql_cookbook.sales_table (date1 STRING, sales int);
+
+INSERT INTO
+  sql_cookbook.sales_table (date1, sales)
+VALUES
+  ('2020-01-01', 647),
+  ('2020-01-02', 561),
+  ('2020-01-03', 741),
+  ('2020-01-04', 978),
+  ('2020-01-05', 1062),
+  ('2020-01-06', 1072);
+
 -- 8章で使うテーブル
 DROP TABLE IF EXISTS sql_cookbook.t500;
 
