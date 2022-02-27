@@ -1,8 +1,8 @@
 SELECT
-  split_part(t1.ip, '.', 1) AS A,
-  split_part(t1.ip, '.', 2) AS B,
-  split_part(t1.ip, '.', 3) AS C,
-  split_part(t1.ip, '.', 4) AS D,
+  split(t1.ip, '.') [offset(0)] AS A,
+  split(t1.ip, '.') [offset(1)] AS B,
+  split(t1.ip, '.') [offset(2)] AS C,
+  split(t1.ip, '.') [offset(3)] AS D,
 FROM
   (
     SELECT

@@ -1,9 +1,9 @@
 SELECT
-  split_part(t1.chara, ',', id) AS empno,
+  cast(split(t1.chara, ',') [offset(id-1)] AS int) AS empno,
 FROM
   (
     SELECT
-      '7654,7698,7783,7788' || ',' AS chara
+      '7654,7698,7783,7788,' AS chara
   ) AS t1,
   (
     SELECT

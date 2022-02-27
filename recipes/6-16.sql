@@ -1,4 +1,3 @@
--- 手元の Postgresql では soundex が存在しないということで動かなかった。
 SELECT
   an1.a_name AS name1,
   an2.a_name AS name2,

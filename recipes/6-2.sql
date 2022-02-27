@@ -1,10 +1,10 @@
 SELECT
-  'g''day mate' AS quarks
+  "g'day mate" AS quarks
 UNION
 ALL
 SELECT
-  'beavers'' teeth'
+  "beavers' teeth"
 UNION
 ALL
 SELECT
-  ''''
+  "'"

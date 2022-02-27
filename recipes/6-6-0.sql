@@ -10,7 +10,7 @@ WHERE
 UNION
 ALL
 SELECT
-  ename || ', $' || cast(sal AS VARCHAR) || '.00' AS data
+  ename || ', $' || cast(sal AS STRING) || '.00' AS data
 FROM
   sql_cookbook.emp
 WHERE
@@ -18,7 +18,7 @@ WHERE
 UNION
 ALL
 SELECT
-  ename || cast(deptno AS varchar) AS data
+  ename || cast(deptno AS STRING) AS data
 FROM
   sql_cookbook.emp
 WHERE

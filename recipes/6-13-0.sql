@@ -6,7 +6,7 @@ SELECT
 FROM
   (
     SELECT
-      substr(ename, 1, 2) || cast(deptno AS varchar) || substr(ename, 3, 2) AS mixed
+      substr(ename, 1, 2) || cast(deptno AS STRING) || substr(ename, 3, 2) AS mixed
     FROM
       sql_cookbook.emp
     WHERE
@@ -14,7 +14,7 @@ FROM
     UNION
     ALL
     SELECT
-      cast(empno AS VARCHAR) AS mixed
+      cast(empno AS STRING) AS mixed
     FROM
       sql_cookbook.emp
     WHERE

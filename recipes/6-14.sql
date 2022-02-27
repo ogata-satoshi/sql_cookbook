@@ -1,4 +1,4 @@
 SELECT
-  split_part(name, ',', 2) AS sub
+  split(name, ',') [offset(1)] AS sub
 FROM
   sql_cookbook.V
