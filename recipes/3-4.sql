@@ -9,5 +9,5 @@ WHERE
     FROM
       sql_cookbook.emp
     WHERE
-      dept.deptno = sql_cookbook.emp.deptno
+      dept.deptno = emp.deptno
   )

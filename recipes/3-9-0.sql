@@ -1,6 +1,6 @@
 DROP TABLE IF EXISTS emp_bonus;
 
-CREATE TABLE emp_bonus (EMPNO int, RECEIVED varchar, TYPE int);
+CREATE TABLE emp_bonus (EMPNO int, RECEIVED STRING, TYPE int);
 
 INSERT INTO
   emp_bonus (EMPNO, RECEIVED, TYPE)
